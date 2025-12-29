@@ -3,223 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Habita Property – Prioritas Hunian & Investasi</title>
+<title>Prioritas Property - Hunian Nyaman & Modern</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:"Segoe UI",Arial,sans-serif;
-    background:#f4f6f9;
-    color:#333;
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
 }
 
 /* ===== NAVBAR ===== */
-header{
-    background:#ffffff;
-    border-bottom:1px solid #eaeaea;
-    position:sticky;
-    top:0;
-    z-index:100;
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.nav{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo{
-    font-size:26px;
-    font-weight:bold;
-    color:#2c7be5;
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c7be5;
 }
 
-nav a{
-    margin:0 14px;
-    text-decoration:none;
-    color:#444;
-    font-weight:500;
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
 }
 
-nav a:hover{
-    color:#2c7be5;
+nav a:hover {
+    color: #2c7be5;
 }
 
-.btn{
-    background:#2c7be5;
-    color:#fff;
-    padding:9px 18px;
-    border-radius:6px;
-    font-size:14px;
-    cursor:pointer;
+.btn {
+    background: #2c7be5;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 /* ===== HERO ===== */
-.hero{
-    background:linear-gradient(120deg,#1b5fc1,#2c7be5);
-    color:#fff;
-    padding:100px 20px;
-    text-align:center;
+.hero {
+    background: linear-gradient(120deg, #2c7be5, #1b5fc1);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
 }
 
-.hero h1{
-    font-size:44px;
-    margin-bottom:12px;
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.hero p{
-    font-size:18px;
-    opacity:0.95;
-    margin-bottom:30px;
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 25px;
 }
 
-.search-box{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
+.search-box {
+    display: flex;
+    justify-content: center;
 }
 
-.search-box input{
-    width:260px;
-    padding:12px;
-    border:none;
-    border-radius:6px;
+.search-box input {
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px 0 0 6px;
 }
 
-.search-box button{
-    padding:12px 22px;
-    border:none;
-    background:#ffcc00;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    background: #ffcc00;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* ===== SECTION ===== */
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-.section h2{
-    text-align:center;
-    margin-bottom:45px;
-    font-size:30px;
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
 }
 
-/* ===== PROPERTY LIST ===== */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:28px;
+/* ===== LISTING ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.card{
-    background:#fff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-.card:hover{
-    transform:translateY(-6px);
+.card-img {
+    height: 160px;
+    background: #ddd;
 }
 
-.card-img{
-    height:170px;
-    background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+.card-content {
+    padding: 15px;
 }
 
-.card-content{
-    padding:18px;
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.card-content h3{
-    font-size:18px;
-    margin-bottom:6px;
+.card-content p {
+    font-size: 14px;
+    color: #666;
 }
 
-.card-content p{
-    font-size:14px;
-    color:#555;
-    margin-bottom:8px;
+/* ===== FEATURES ===== */
+.features {
+    background: #ffffff;
 }
 
-.price{
-    font-weight:bold;
-    color:#2c7be5;
+.feature-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    text-align: center;
 }
 
-/* ===== PRIORITY FEATURES ===== */
-.features{
-    background:#ffffff;
+.feature {
+    padding: 25px;
+    border-radius: 10px;
+    background: #f5f7fa;
 }
 
-.feature-box{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
-    text-align:center;
-}
-
-.feature{
-    padding:30px 20px;
-    border-radius:12px;
-    background:#f4f6f9;
-}
-
-.feature h3{
-    margin-bottom:10px;
-    color:#2c7be5;
-}
-
-.feature p{
-    font-size:14px;
-    color:#555;
-}
-
-/* ===== CTA ===== */
-.cta{
-    background:linear-gradient(120deg,#2c7be5,#1b5fc1);
-    color:#fff;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.cta h2{
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    margin-bottom:25px;
-    opacity:0.9;
-}
-
-.cta .btn{
-    background:#ffcc00;
-    color:#000;
-    font-weight:bold;
+.feature h3 {
+    margin-bottom: 10px;
+    color: #2c7be5;
 }
 
 /* ===== FOOTER ===== */
-footer{
-    background:#1e1e1e;
-    color:#bbb;
-    padding:25px;
-    text-align:center;
-    font-size:14px;
+footer {
+    background: #1e1e1e;
+    color: #bbb;
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -229,100 +186,79 @@ footer{
 <!-- NAVBAR -->
 <header>
     <div class="nav">
-        <div class="logo">Habita Property</div>
+        <div class="logo">Prioritas Property</div>
         <nav>
             <a href="#">Beranda</a>
-            <a href="#">Properti</a>
-            <a href="#">Investasi</a>
-            <a href="#">Developer</a>
+            <a href="#">Hunian</a>
+            <a href="#">Tentang</a>
             <a href="#">Kontak</a>
         </nav>
-        <div class="btn">Pasang Properti</div>
+        <div class="btn">Masuk</div>
     </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Properti Prioritas & Bernilai Tinggi</h1>
-    <p>Hunian, Apartemen & Aset Investasi Terpilih di Lokasi Strategis</p>
+    <h1>Temukan Hunian Prioritas Anda</h1>
+    <p>Kost, Coliving & Apartemen di Lokasi Strategis</p>
 
     <div class="search-box">
-        <input type="text" placeholder="Lokasi properti">
-        <input type="text" placeholder="Harga maksimal">
-        <button>Cari Properti</button>
+        <input type="text" placeholder="Cari lokasi atau harga...">
+        <button>Cari</button>
     </div>
 </section>
 
-<!-- PROPERTY LIST -->
+<!-- POPULAR -->
 <section class="section">
-    <h2>Properti Unggulan</h2>
+    <h2>Hunian Unggulan</h2>
     <div class="cards">
-
         <div class="card">
             <div class="card-img"></div>
             <div class="card-content">
-                <h3>Apartemen Sudirman Prime</h3>
-                <p>Jakarta Pusat • 2 BR • Furnished</p>
-                <div class="price">Rp 1,8 Miliar</div>
+                <h3>Prioritas Sudirman</h3>
+                <p>Mulai Rp1.800.000 / bulan</p>
             </div>
         </div>
-
         <div class="card">
             <div class="card-img"></div>
             <div class="card-content">
-                <h3>Townhouse Dago Estate</h3>
-                <p>Bandung • Freehold • Cluster</p>
-                <div class="price">Rp 2,4 Miliar</div>
+                <h3>Prioritas Dago</h3>
+                <p>Mulai Rp1.500.000 / bulan</p>
             </div>
         </div>
-
         <div class="card">
             <div class="card-img"></div>
             <div class="card-content">
-                <h3>Ruko Bisnis Surabaya</h3>
-                <p>Lokasi Komersial • ROI Tinggi</p>
-                <div class="price">Rp 3,1 Miliar</div>
+                <h3>Prioritas Surabaya</h3>
+                <p>Mulai Rp2.300.000 / bulan</p>
             </div>
         </div>
-
     </div>
 </section>
 
-<!-- PRIORITY FEATURES -->
+<!-- FEATURES -->
 <section class="section features">
-    <h2>Keunggulan Habita Property</h2>
+    <h2>Kenapa Prioritas Property?</h2>
     <div class="feature-box">
-
         <div class="feature">
-            <h3>Kurasi Properti</h3>
-            <p>Hanya properti bernilai tinggi & legalitas jelas</p>
+            <h3>Fully Furnished</h3>
+            <p>Hunian siap huni dengan fasilitas lengkap</p>
         </div>
-
         <div class="feature">
-            <h3>Fokus Investasi</h3>
-            <p>Potensi capital gain & passive income</p>
+            <h3>Fleksibel</h3>
+            <p>Sewa bulanan tanpa ribet</p>
         </div>
-
         <div class="feature">
-            <h3>Aman & Transparan</h3>
-            <p>Didukung mitra developer & agen terpercaya</p>
+            <h3>Aman & Nyaman</h3>
+            <p>Lingkungan terkurasi dan aman</p>
         </div>
-
     </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Punya Properti untuk Dijual atau Disewakan?</h2>
-    <p>Pasarkan properti Anda ke ribuan calon pembeli & investor</p>
-    <div class="btn">Pasang Properti Sekarang</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    © 2025 Habita Property. All Rights Reserved.
+    © 2025 Prioritas Property. All Rights Reserved.
 </footer>
 
 </body>
-    </html>
-                                   
+</html>
