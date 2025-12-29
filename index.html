@@ -3,262 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prioritas Property - Hunian Nyaman & Modern</title>
+<title>Prioritas Property | Hunian Modern & Nyaman</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --primary:#2563eb;
+  --dark:#0f172a;
+  --muted:#64748b;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --radius:16px;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f5f7fa;
-    color: #333;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
 }
 
 /* ===== NAVBAR ===== */
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #eaeaea;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+header{
+  position:sticky;
+  top:0;
+  z-index:99;
+  background:rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid #e5e7eb;
 }
 
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #2c7be5;
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:var(--primary);
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
+nav{
+  display:flex;
+  gap:20px;
 }
 
-nav a:hover {
-    color: #2c7be5;
+nav a{
+  text-decoration:none;
+  font-size:14px;
+  color:var(--muted);
+  font-weight:500;
 }
 
-.btn {
-    background: #2c7be5;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 14px;
+nav a:hover{
+  color:var(--primary);
+}
+
+.btn{
+  background:var(--primary);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
 }
 
 /* ===== HERO ===== */
-.hero {
-    background: linear-gradient(120deg, #2c7be5, #1b5fc1);
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
+.hero{
+  padding:90px 20px 70px;
+  background:
+    linear-gradient(to bottom, rgba(15,23,42,.55), rgba(15,23,42,.75)),
+    url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero h1{
+  font-size:clamp(28px,5vw,44px);
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.hero p {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-bottom: 25px;
+.hero p{
+  font-size:clamp(14px,3.5vw,18px);
+  color:#e5e7eb;
+  margin-bottom:28px;
 }
 
-.search-box {
-    display: flex;
-    justify-content: center;
+/* SEARCH */
+.search-box{
+  max-width:520px;
+  margin:auto;
+  background:#fff;
+  display:flex;
+  border-radius:999px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
-.search-box input {
-    width: 300px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px 0 0 6px;
+.search-box input{
+  flex:1;
+  border:none;
+  padding:14px 18px;
+  font-size:14px;
+  outline:none;
 }
 
-.search-box button {
-    padding: 12px 20px;
-    border: none;
-    background: #ffcc00;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
-    font-weight: bold;
+.search-box button{
+  border:none;
+  padding:0 26px;
+  background:var(--primary);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
 }
 
 /* ===== SECTION ===== */
-.section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
+.section h2{
+  font-size:clamp(22px,4vw,30px);
+  font-weight:800;
+  margin-bottom:40px;
+  text-align:center;
 }
 
-/* ===== LISTING ===== */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
 }
 
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.3s ease;
 }
 
-.card-img {
-    height: 160px;
-    background: #ddd;
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
-.card-content {
-    padding: 15px;
+.card-img{
+  height:180px;
+  background-size:cover;
+  background-position:center;
 }
 
-.card-content h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
+.card-content{
+  padding:18px;
 }
 
-.card-content p {
-    font-size: 14px;
-    color: #666;
+.card-content h3{
+  font-size:18px;
+  font-weight:700;
+}
+
+.card-content p{
+  font-size:14px;
+  color:var(--muted);
 }
 
 /* ===== FEATURES ===== */
-.features {
-    background: #ffffff;
+.features{
+  background:#fff;
 }
 
-.feature-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    text-align: center;
+.feature-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
 }
 
-.feature {
-    padding: 25px;
-    border-radius: 10px;
-    background: #f5f7fa;
+.feature{
+  padding:28px;
+  border-radius:var(--radius);
+  background:var(--bg);
 }
 
-.feature h3 {
-    margin-bottom: 10px;
-    color: #2c7be5;
+.feature h3{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:var(--primary);
+}
+
+.feature p{
+  font-size:14px;
+  color:var(--muted);
 }
 
 /* ===== FOOTER ===== */
-footer {
-    background: #1e1e1e;
-    color: #bbb;
-    padding: 25px;
-    text-align: center;
-    font-size: 14px;
+footer{
+  background:var(--dark);
+  color:#94a3b8;
+  padding:28px 20px;
+  text-align:center;
+  font-size:13px;
+}
+
+/* ===== MOBILE PRECISION ===== */
+@media(max-width:640px){
+  nav{display:none;}
+  .hero{padding:70px 20px 60px;}
+  .search-box{border-radius:14px;}
+  .btn{display:none;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
-    <div class="nav">
-        <div class="logo">Prioritas Property</div>
-        <nav>
-            <a href="#">Beranda</a>
-            <a href="#">Hunian</a>
-            <a href="#">Tentang</a>
-            <a href="#">Kontak</a>
-        </nav>
-        <div class="btn">Masuk</div>
-    </div>
+  <div class="nav">
+    <div class="logo">Prioritas Property</div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Hunian</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </nav>
+    <div class="btn">Masuk</div>
+  </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>Temukan Hunian Prioritas Anda</h1>
-    <p>Kost, Coliving & Apartemen di Lokasi Strategis</p>
+  <h1>Hunian Nyaman di Lokasi Prioritas</h1>
+  <p>Kost, coliving & apartemen modern untuk gaya hidup urban</p>
 
-    <div class="search-box">
-        <input type="text" placeholder="Cari lokasi atau harga...">
-        <button>Cari</button>
-    </div>
+  <div class="search-box">
+    <input type="text" placeholder="Cari lokasi atau budget...">
+    <button>Cari</button>
+  </div>
 </section>
 
-<!-- POPULAR -->
 <section class="section">
-    <h2>Hunian Unggulan</h2>
-    <div class="cards">
-        <div class="card">
-            <div class="card-img"></div>
-            <div class="card-content">
-                <h3>Prioritas Sudirman</h3>
-                <p>Mulai Rp1.800.000 / bulan</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img"></div>
-            <div class="card-content">
-                <h3>Prioritas Dago</h3>
-                <p>Mulai Rp1.500.000 / bulan</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img"></div>
-            <div class="card-content">
-                <h3>Prioritas Surabaya</h3>
-                <p>Mulai Rp2.300.000 / bulan</p>
-            </div>
-        </div>
+  <h2>Hunian Unggulan</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267');"></div>
+      <div class="card-content">
+        <h3>Prioritas Sudirman</h3>
+        <p>Mulai Rp1.800.000 / bulan</p>
+      </div>
     </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2');"></div>
+      <div class="card-content">
+        <h3>Prioritas Dago</h3>
+        <p>Mulai Rp1.500.000 / bulan</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511');"></div>
+      <div class="card-content">
+        <h3>Prioritas Surabaya</h3>
+        <p>Mulai Rp2.300.000 / bulan</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section features">
-    <h2>Kenapa Prioritas Property?</h2>
-    <div class="feature-box">
-        <div class="feature">
-            <h3>Fully Furnished</h3>
-            <p>Hunian siap huni dengan fasilitas lengkap</p>
-        </div>
-        <div class="feature">
-            <h3>Fleksibel</h3>
-            <p>Sewa bulanan tanpa ribet</p>
-        </div>
-        <div class="feature">
-            <h3>Aman & Nyaman</h3>
-            <p>Lingkungan terkurasi dan aman</p>
-        </div>
+  <h2>Kenapa Prioritas Property?</h2>
+  <div class="feature-box">
+    <div class="feature">
+      <h3>Siap Huni</h3>
+      <p>Fully furnished, langsung tempati</p>
     </div>
+    <div class="feature">
+      <h3>Fleksibel</h3>
+      <p>Sewa bulanan, tanpa komitmen panjang</p>
+    </div>
+    <div class="feature">
+      <h3>Aman</h3>
+      <p>Lingkungan terkurasi & terjaga</p>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2025 Prioritas Property. All Rights Reserved.
+  © 2025 Prioritas Property. All rights reserved.
 </footer>
 
 </body>
-</html>
+    </html>
+        
